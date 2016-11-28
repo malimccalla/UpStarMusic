@@ -37,8 +37,6 @@ const buildSearchQuery = (criteria) => {
 };
 
 module.exports = (criteria, sortProperty, offset = 0, limit = 20) => {
-  console.log(criteria);
-
   const query = Artist
     .find(buildSearchQuery(criteria))
     .sort({ [sortProperty]: 1 })
